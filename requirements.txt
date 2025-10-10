@@ -1,0 +1,15 @@
+# Document parsing
+pypdf
+python-docx
+pdfplumber
+unstructured[pdf]
+
+# NLP and text parsing
+spacy
+nltk
+
+# Data handling
+pandas
+
+# Testing
+pytest
