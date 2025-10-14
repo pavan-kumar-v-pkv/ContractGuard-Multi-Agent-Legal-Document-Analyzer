@@ -10,6 +10,32 @@ nltk
 
 # Data handling
 pandas
+numpy
+
+# LangChain ecosystem
+
+langchain
+langchain-community
+langchain-openai
+
+# LangGraph for agents
+langgraph==0.0.55
+
+# Vector stores
+faiss-cpu
+chromadb
+
+# Embeddings and LLMs
+openai
+sentence-transformers
+
+# RAG
+llama-index
+llama-index-embeddings-huggingface
+
+# Environment Variables
+python-dotenv
 
 # Testing
 pytest
+tqdm
