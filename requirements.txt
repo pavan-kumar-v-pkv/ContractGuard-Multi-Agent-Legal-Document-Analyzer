@@ -12,13 +12,12 @@ nltk
 pandas
 numpy
 
-# LangChain ecosystem
-
+# LangChain ecosystem (optional, for compatibility)
 langchain
 langchain-community
 langchain-openai
 
-# LangGraph for agents
+# LangGraph for agents (optional)
 langgraph==0.0.55
 
 # Vector stores
@@ -38,4 +37,17 @@ python-dotenv
 
 # Testing
 pytest
+pytest-asyncio  # For async tests
 tqdm
+
+# HTTP client for Ollama
+aiohttp
+requests
+
+# Logging
+colorlog
+
+ollama
+asyncio
+tenacity
+httpx

@@ -151,16 +151,16 @@ class DocumentParser:
                     'content': ''
                 }
             else:
-                # Add to current section
-                if current_section:
-                    current_section['content'] += f"{line}\n"
-                else:
-                    # Content before first header
-                    if not sections:
-                        current_section = {
-                            'header': 'Preamble',
-                            'content': f"{line}\n"
-                        }
+                # Ensure current_section is a dict before modifying it
+                if not isinstance(current_section, dict):
+                    # If no sections yet, treat as preamble; otherwise start a new preamble-like section
+                    current_section = {
+                        'header': 'Preamble',
+                        'content': ''
+                    }
+
+                # Add to current section content
+                current_section['content'] += f"{line}\n"
 
         # last section
         if current_section:
@@ -170,7 +170,7 @@ class DocumentParser:
         return sections
     
     # Helper function for easy use
-    def parse_document(file_path: str) -> Dict:
+    def parse_document(self, file_path: str) -> Dict:
         """
         Quick function to parse a document
         Args:
