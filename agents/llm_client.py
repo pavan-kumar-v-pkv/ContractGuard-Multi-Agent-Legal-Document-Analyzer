@@ -8,7 +8,7 @@ import json
 from typing import Optional, Dict, Any, List
 from pydantic import BaseModel
 import asyncio
-from tenacity import retry, wait_fixed, stop_after_attempt, wait_exponential
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 class LLMConfig(BaseModel):
     """Configuration for LLM"""
