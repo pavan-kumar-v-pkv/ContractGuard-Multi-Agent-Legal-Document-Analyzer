@@ -1,0 +1,36 @@
+# Core framework
+streamlit==1.32.0
+python-dotenv==1.0.1
+
+# LangChain & LangGraph
+langchain==0.2.3
+langchain-core==0.2.9
+langchain-openai==0.1.7
+langchain-community==0.2.3
+langgraph==0.0.55
+
+# RAG & Embeddings
+chromadb==0.4.24
+sentence-transformers==2.6.1
+tiktoken==0.7.0
+
+# Document paring
+pdfplumber==0.11.0
+python-docx==1.1.0
+PyPDF2==3.0.1
+
+# NLP
+spacy==3.7.4
+
+# Utilities
+pydantic==2.7.4
+pydantic-settings==2.2.1
+
+# Development & testing
+pytest==8.1.1
+black==24.3.0
+flake8==7.0.0
+ipython==8.23.0
+
+# Ollama
+ollama==0.1.7
