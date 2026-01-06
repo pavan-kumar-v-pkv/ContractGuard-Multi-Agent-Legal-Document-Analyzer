@@ -169,4 +169,4 @@ class PDFParser:
                     'start_pos': section_match['start_pos']
                 })
 
-        return sections5
+        return sections
