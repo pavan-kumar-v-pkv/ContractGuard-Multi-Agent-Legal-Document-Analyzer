@@ -1,4 +1,4 @@
-"""Application configguration management."""
+"""Application configuration management."""
 
 from pydantic_settings import BaseSettings
 from typing import Literal, Optional
@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "llama3:8b"
 
-    # RAG COnfiguration
+    # RAG Configuration
     VECTOR_STORE_PATH: str = "./data/vector_store"
     CHUNK_SIZE: int = 512
     CHUNK_OVERLAP: int = 100

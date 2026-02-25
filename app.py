@@ -1,0 +1,15 @@
+"""ContractGuard entrypoint for Streamlit."""
+
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).parent
+SRC_PATH = PROJECT_ROOT / "src"
+if str(SRC_PATH) not in sys.path:
+    sys.path.insert(0, str(SRC_PATH))
+
+from src.ui.streamlit_app import run_app  # noqa: E402
+
+
+if __name__ == "__main__":
+    run_app()

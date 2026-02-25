@@ -67,7 +67,7 @@ class DOCXParser:
                 table_data = []
                 for row in table.rows:
                     row_data = [cell.text for cell in row.cells]
-                    table_data.apppend(row_data)
+                    table_data.append(row_data)
                 tables.append(table_data)
 
             # Step 5 Extract Metadata
@@ -135,7 +135,7 @@ class DOCXParser:
                 continue
 
             # Try each regex pattern to find section headers
-            for pattern in self.sesction_patterns:
+            for pattern in self.section_patterns:
                 match = re.match(pattern, line_stripped)
 
                 if match:
@@ -143,7 +143,7 @@ class DOCXParser:
                     section_num = match.group(1)
                     section_title = match.group(2).strip() if len(match.groups()) > 1 else ''
 
-                    sectino_matches.append({
+                    section_matches.append({
                         'number': section_num,
                         'title': section_title,
                         'line_idx': line_idx,

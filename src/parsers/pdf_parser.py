@@ -141,7 +141,7 @@ class PDFParser:
                         'number': section_num,
                         'title': section_title,
                         'line_idx': line_idx,
-                        'start_post': current_position
+                        'start_pos': current_position
                     })
                     break # found a match, stop trying other patterns
             current_position += len(line) + 1 # +1 for newline

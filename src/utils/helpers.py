@@ -35,7 +35,8 @@ def validate_file(file_path: Path) -> bool:
     from config.settings import settings
     
     # Check extension
-    if file_path.suffix.lower() not in settings.SUPPORTED_FILE_TYPES:
+    extension = file_path.suffix.lower().lstrip(".")
+    if extension not in settings.SUPPORTED_FILE_TYPES:
         return False
 
     # Check size
